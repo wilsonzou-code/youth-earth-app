@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { MapView } from "@/components/MapView";
 import s from "@/styles/pages.module.css";
