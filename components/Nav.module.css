@@ -1,0 +1,67 @@
+.nav {
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-default);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--yxe-forest-700);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.logo em {
+  font-style: normal;
+  color: var(--yxe-ochre-500);
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0 3px;
+}
+.logo:hover { color: var(--yxe-forest-700); }
+
+.links {
+  display: flex;
+  gap: 22px;
+  flex: 1;
+}
+.links a {
+  font-size: 14px;
+  color: var(--fg-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 120ms;
+}
+.links a:hover { color: var(--yxe-forest-700); }
+.links .active {
+  color: var(--yxe-forest-700);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.cta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  background: var(--yxe-forest-700);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms;
+}
+.cta:hover { background: var(--yxe-forest-900); color: #fff; }
+
+@media (max-width: 920px) {
+  .links, .cta { display: none; }
+}

@@ -1,0 +1,93 @@
+.footer { background: var(--yxe-forest-800); color: var(--fg-on-dark); }
+
+.inner {
+  padding: 56px 28px 32px;
+  max-width: var(--container-default);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--fg-on-dark);
+  letter-spacing: -0.03em;
+}
+.logo em { font-style: normal; color: var(--yxe-ochre-300); font-family: var(--font-display); margin: 0 4px; }
+
+.tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(251,249,244,0.7);
+  margin: 10px 0 16px;
+  max-width: 320px;
+  line-height: 1.4;
+}
+
+.socials { display: flex; gap: 10px; }
+.socials a {
+  color: rgba(251,249,244,0.85);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(251,249,244,0.25);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: color 120ms, border-color 120ms;
+}
+.socials a:hover { color: #fff; border-color: rgba(251,249,244,0.5); }
+.rednote {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FE2C55 !important;
+  background: #fff;
+  border: none !important;
+}
+
+.col h5 {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(251,249,244,0.55);
+  margin-bottom: 14px;
+}
+.col a {
+  display: block;
+  font-size: 14px;
+  color: var(--fg-on-dark);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 120ms;
+}
+.col a:hover { color: var(--yxe-ochre-300); }
+
+.legal {
+  max-width: var(--container-default);
+  margin: 0 auto;
+  padding: 20px 28px;
+  border-top: 1px solid rgba(251,249,244,0.12);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(251,249,244,0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .inner { grid-template-columns: 1fr 1fr; }
+  .legal { flex-direction: column; gap: 8px; }
+}
+@media (max-width: 560px) {
+  .inner { grid-template-columns: 1fr; }
+}
