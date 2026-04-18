@@ -1,9 +1,18 @@
 import "dotenv/config";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "../app/generated/prisma/client";
 import bcrypt from "bcryptjs";
 
-const adapter = new PrismaLibSql({ url: process.env.DATABASE_URL ?? "file:./prisma/dev.db" });
+function cleanUrl(url: string) {
+  const u = new URL(url);
+  u.searchParams.delete("sslmode");
+  u.searchParams.delete("channel_binding");
+  return u.toString();
+}
+
+const url = process.env.DATABASE_URL;
+if (!url) throw new Error("DATABASE_URL is not set");
+const adapter = new PrismaNeon({ connectionString: cleanUrl(url) });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
